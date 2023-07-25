@@ -7,7 +7,7 @@
 
 #include "SPI.h"
 
-#define LMP_SPI_MODE            arduino::SPI_MODE0
+#define LMP_SPI_MODE            arduino::SPI_MODE2
 #define LMP_SPI_FREQ            10000000
 
 #define LMP91050_DEV_CONFIG_REG                         (0x0)                  // Device Configuration
