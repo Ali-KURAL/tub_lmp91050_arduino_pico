@@ -14,7 +14,7 @@ void lmp91050::begin(SPIClass *userSPI,uint8_t userCS) {
     digitalWrite(this->_cs,HIGH);
 }
 
-uint8_t lmp91050::readRegister(uint8_t addr) const {
+uint8_t lmp91050::readRegister(uint8_t addr) {
     this->_spi->beginTransaction(SPISettings(LMP_SPI_FREQ, MSBFIRST, LMP_SPI_MODE));
     digitalWrite(this->_cs,LOW);
     uint8_t opr = LMP91050_RW_BIT | addr;

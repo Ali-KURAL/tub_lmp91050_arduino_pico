@@ -17,7 +17,7 @@ void setup() {
     SPI.setSCK(PIN_SPI_SCK);
     lmp.begin(&SPI,PIN_SPI_CS);
     delay(5);
-    lmp.writeDevConf(10);
+    lmp.writeDevConf(LMP_CONFIG_DEFAULT);
     delay(5);
     Serial.println("Configuration done");
 
